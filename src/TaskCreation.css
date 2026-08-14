@@ -1,5 +1,5 @@
 /* ==========================================================================
-   GLOBAL RESET & FONTS (NO BLACK USED)
+   GLOBAL RESET & MODERN LUXURY GRADIENT BACKGROUND
    ========================================================================== */
 * {
   box-sizing: border-box;
@@ -9,9 +9,10 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  background-color: #0b132b;
-  /* Deep Midnight Blue instead of Black */
-  color: #f8faf9;
+  /* Premium Slate-Gold Subtle Ambient Gradient */
+  background: linear-gradient(135deg, #d8d3c5 0%, #e8e4d9 50%, #c9c3b2 100%);
+  background-attachment: fixed;
+  color: #211D19;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -23,18 +24,22 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding-bottom: 50px;
 }
 
 .app-header {
-  background-color: #1c2541;
+  background: rgba(211, 206, 196, 0.85);
+  backdrop-filter: blur(12px);
   padding: 18px 36px;
-  border-bottom: 1px solid #2a385b;
+  border-bottom: 1px solid rgba(196, 189, 173, 0.6);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
 .app-header h1 {
   font-size: 20px;
-  color: #f8faf9;
+  color: #8C6E43;
   font-weight: 700;
+  letter-spacing: 0.5px;
 }
 
 .main-content {
@@ -42,39 +47,43 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 20px;
+  padding: 40px 24px;
   gap: 28px;
 }
 
 /* ==========================================================================
-   CARDS & CONTAINERS
+   ELEGANT GLASS CARDS WITH SHADOWS
    ========================================================================== */
 .card {
-  background-color: #1c2541;
-  /* Dark Navy Card */
-  border-radius: 16px;
+  /* Semi-transparent warm surface with blur for luxury look */
+  background: rgba(240, 236, 227, 0.88);
+  backdrop-filter: blur(16px);
+  border-radius: 24px;
   width: 100%;
   max-width: 580px;
-  padding: 36px;
-  box-shadow: 0 16px 32px rgba(11, 19, 43, 0.6);
-  border: 1px solid #2a385b;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.06),
+    0 1px 3px rgba(164, 131, 86, 0.1);
 }
 
 .modal-header h2 {
   font-size: 22px;
-  color: #ffffff;
+  color: #211D19;
   font-weight: 700;
+  font-family: 'DM Serif Display', Georgia, serif;
   margin-bottom: 6px;
 }
 
 .modal-header .subtitle {
   margin-bottom: 28px;
-  color: #94a3b8;
-  font-size: 14px;
+  color: #61584D;
+  font-size: 13px;
 }
 
 /* ==========================================================================
-   FORM CONTROLS
+   FORM CONTROLS & INTERACTIVE BUTTONS
    ========================================================================== */
 .form-group {
   margin-bottom: 22px;
@@ -83,11 +92,11 @@ body {
 }
 
 .form-group label {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  color: #cbd5e1;
-  margin-bottom: 10px;
-  letter-spacing: 0.8px;
+  color: #61584D;
+  margin-bottom: 8px;
+  letter-spacing: 1.2px;
   text-transform: uppercase;
 }
 
@@ -100,50 +109,45 @@ body {
 
 .category-btn,
 .priority-btn {
-  padding: 12px 16px;
-  border-radius: 10px;
+  padding: 11px 16px;
+  border-radius: 20px;
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
-  background-color: #0b132b;
-  border: 1px solid #2a385b;
-  color: #cbd5e1;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(220, 214, 201, 0.6);
+  border: 1px solid rgba(196, 189, 173, 0.7);
+  color: #453E35;
   text-align: center;
 }
 
 .category-btn:hover,
 .priority-btn:hover {
-  background-color: #2a385b;
-  color: #ffffff;
+  background: rgba(207, 199, 184, 0.8);
+  color: #211D19;
+  border-color: #A48356;
+  transform: translateY(-1px);
 }
 
-.category-btn.selected {
-  background-color: #3a86ef;
-  /* Royal Blue */
-  border-color: #60a5fa;
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(58, 134, 239, 0.4);
-}
-
+.category-btn.selected,
 .priority-btn.selected {
-  background-color: #d97706;
-  /* Warm Amber Gold */
-  border-color: #f59e0b;
+  /* Rich Gold Gradient Accent for Buttons */
+  background: linear-gradient(135deg, #B59363 0%, #8F7047 100%);
+  border-color: #7A5F37;
   color: #ffffff;
-  box-shadow: 0 4px 14px rgba(217, 119, 6, 0.4);
+  box-shadow: 0 6px 16px rgba(164, 131, 86, 0.4);
 }
 
 .text-input {
   width: 100%;
-  border: 1px solid #2a385b;
-  background-color: #0b132b;
-  border-radius: 10px;
+  border: 1px solid rgba(196, 189, 173, 0.8);
+  background: rgba(226, 223, 215, 0.6);
+  border-radius: 16px;
   padding: 14px 16px;
   font-size: 14px;
   outline: none;
   transition: all 0.2s ease;
-  color: #f8faf9;
+  color: #211D19;
   font-family: inherit;
 }
 
@@ -153,86 +157,90 @@ body {
 }
 
 .text-input:focus {
-  border-color: #3a86ef;
-  box-shadow: 0 0 0 3px rgba(58, 134, 239, 0.25);
+  border-color: #A48356;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 3px rgba(164, 131, 86, 0.25);
 }
 
 .text-input.error-border {
-  border-color: #e11d48;
+  border-color: #DC2626;
 }
 
 .error-text {
-  color: #f43f5e;
+  color: #DC2626;
   font-size: 12px;
   margin-top: 6px;
 }
 
 .error-message {
-  color: #fecdd3;
-  background-color: #881337;
-  border: 1px solid #9f1239;
+  color: #991B1B;
+  background: rgba(248, 215, 218, 0.9);
+  border: 1px solid #F5C6CB;
   padding: 14px;
-  border-radius: 10px;
+  border-radius: 14px;
   font-size: 13px;
   margin-bottom: 24px;
   text-align: center;
 }
 
 /* ==========================================================================
-   BUTTONS
+   PRIMARY GRADIENT SUBMIT BUTTON (#A48356 GRADIENT)
    ========================================================================== */
 .submit-btn {
   width: 100%;
-  padding: 16px;
-  border-radius: 12px;
-  background-image: linear-gradient(135deg, #0d9488 0%, #059669 100%);
-  /* Emerald Teal */
+  height: 50px;
+  border-radius: 16px;
+  /* Gold-Bronze Gradient */
+  background: linear-gradient(135deg, #B89768 0%, #A48356 50%, #87683F 100%);
   color: #ffffff;
   border: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.3px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   margin-top: 12px;
-  box-shadow: 0 4px 16px rgba(13, 148, 136, 0.3);
+  box-shadow: 0 8px 20px rgba(164, 131, 86, 0.4);
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(13, 148, 136, 0.45);
+  box-shadow: 0 12px 24px rgba(164, 131, 86, 0.5);
+  background: linear-gradient(135deg, #C2A172 0%, #AD8C5E 50%, #8F7047 100%);
 }
 
 .submit-btn:disabled {
-  background-image: none;
-  background-color: #2a385b;
-  color: #64748b;
+  background: #C4BDAD;
+  color: #786F62;
   cursor: not-allowed;
   box-shadow: none;
   transform: none;
 }
 
 /* ==========================================================================
-   REQUESTS LIST
+   REQUESTS LIST & CARDS
    ========================================================================== */
 .requests-list-card {
-  padding: 28px 36px;
+  padding: 32px;
 }
 
 .requests-list-card h2 {
   font-size: 18px;
   margin-bottom: 20px;
   text-align: left;
-  color: #f8faf9;
+  color: #211D19;
+  font-family: 'DM Serif Display', Georgia, serif;
 }
 
 .no-records {
   text-align: center;
-  color: #94a3b8;
-  font-size: 14px;
+  color: #61584D;
+  font-size: 13px;
   padding: 32px 0;
-  border: 1px dashed #2a385b;
-  border-radius: 12px;
+  border: 1px dashed #A48356;
+  border-radius: 16px;
+  background: rgba(220, 214, 201, 0.4);
 }
 
 .requests-container {
@@ -245,10 +253,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #2a385b;
-  background-color: #0b132b;
-  padding: 18px;
-  border-radius: 10px;
+  border: 1px solid rgba(196, 189, 173, 0.7);
+  background: rgba(240, 236, 227, 0.9);
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .request-info {
@@ -260,23 +269,24 @@ body {
 .request-title {
   font-size: 14px;
   font-weight: 600;
-  color: #f8faf9;
+  color: #211D19;
 }
 
 .request-id {
   font-size: 12px;
-  color: #94a3b8;
+  color: #61584D;
 }
 
 .badge-new {
-  background-color: rgba(58, 134, 239, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(96, 165, 250, 0.3);
-  font-size: 11px;
+  background: linear-gradient(135deg, #E8DEC8 0%, #D8C7B0 100%);
+  color: #7A5F37;
+  border: 1px solid #B8A58B;
+  font-size: 10px;
   font-weight: 700;
-  padding: 4px 10px;
-  border-radius: 6px;
-  letter-spacing: 0.5px;
+  padding: 4px 12px;
+  border-radius: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -284,11 +294,12 @@ body {
    ========================================================================== */
 @media (max-width: 600px) {
   .main-content {
-    padding: 20px 12px;
+    padding: 20px 16px;
   }
 
   .card {
-    padding: 20px;
+    padding: 24px;
+    border-radius: 20px;
   }
 
   .category-grid,
